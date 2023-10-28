@@ -1,51 +1,47 @@
 class Circle {
  constructor(radius = 1.0, color = "red") {
-  this.radius = radius
-  this.color = color
+  this.radius = radius;
+  this.color = color;
  }
+
  getRadius() {
-  return this.radius
+  return this.radius;
  }
 
  setRadius(radius) {
-  this.radius = radius
+  this.radius = radius;
  }
 
  getColor() {
-  this.color = this.color
+  return this.color;
  }
 
  setColor(color) {
-  this.color = color
+  this.color = color;
  }
 
  toString() {
-  return `Radius: ${this.radius} & Color: ${this.color}`
+  return `Circle[radius=${this.radius}, color=${this.color}]`;
  }
 
  getArea() {
-  return Math.PI * this.radius * this.radius
+  return Math.PI * this.radius * this.radius;
  }
 
  getCircumference() {
-  return 2 * Math.PI * this.radius
+  return 2 * Math.PI * this.radius;
  }
 }
 
-const circle = new Circle(2.0, "blue")
-const radius = new circle.getRadius()
-const color = new circle.getColor()
-console.log(circle)
-console.log(radius)
-console.log(color)
+const circle = new Circle(2.0, "blue");
 
-circle.setRadius(3.0)
-circle.setColor("red")
+const radius = circle.getRadius();
+const color = circle.getColor();
 
-const stringRepresentation = circle.toString()
-console.log(stringRepresentation)
+circle.setRadius(3.0);
+circle.setColor("green");
 
-const area = circle.getArea()
-const circumference = circle.getCircumference()
-console.log(area)
-console.log(circumference)
+const stringRepresentation = circle.toString();
+
+const area = circle.getArea();
+const circumference = circle.getCircumference();
